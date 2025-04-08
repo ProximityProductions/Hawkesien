@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import Logo from '../images/logo.png'; 
+import Logo from '../../images/logo.png'; // Adjust the path as necessary
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
                 alt="Skyroot Logo" 
                 className="logo-image"
                 width={150}
-                height={100}
+                height={150}
               />
             </a>
           </div>
