@@ -21,7 +21,7 @@
 }
 
 .navbar.scrolled {
-  background-color: rgb(33, 48, 74);
+  background-color: rgb(0, 0, 0);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,6 +52,18 @@
   /* height: 42px; */
 }
 
+/* Logo text styling */
+.logo-text {
+  color: #000000; /* Dark color for initial state */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .logo-text {
+  color: #ffffff; /* White color when scrolled */
+}
+
 /* Desktop navigation */
 .desktop-nav {
   display: none;
@@ -67,11 +79,16 @@
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 15px;
-  color: #ffffff;
+  color: black;
   text-decoration: none;
   transition: color 0.2s;
   letter-spacing: 0.2px;
   position: relative;
+}
+
+/* Fix: Change nav-link color to white when navbar is scrolled */
+.navbar.scrolled .nav-link {
+  color: white;
 }
 
 .nav-link:after {
@@ -79,13 +96,23 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background: #0080ff;
+  background: black;
   bottom: -5px;
   left: 0;
   transition: width 0.3s ease;
 }
 
+/* Fix: Change underline color to white when navbar is scrolled */
+.navbar.scrolled .nav-link:after {
+  background: white;
+}
+
 .nav-link:hover {
+  color: grey;
+}
+
+/* Fix: Change hover color for scrolled navbar */
+.navbar.scrolled .nav-link:hover {
   color: #0080ff;
 }
 

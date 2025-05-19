@@ -41,6 +41,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="navbar-logo">
             <a href="/" className="logo-link">
+              {/* If your logo is already an image with text embedded */}
               <img 
                 src={Logo} 
                 alt="Skyroot Logo" 
@@ -48,6 +49,8 @@ const Navbar = () => {
                 width={150}
                 height={150}
               />
+              {/* If you need separate text alongside or instead of the logo image */}
+              {/* <span className="logo-text">Skyroot</span> */}
             </a>
           </div>
           
@@ -133,14 +136,14 @@ const Navbar = () => {
             <button onClick={toggleMenu} className="menu-toggle">
               {isOpen ? (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M18 6L6 18" stroke={isScrolled ? "white" : "black"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 6L18 18" stroke={isScrolled ? "white" : "black"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               ) : (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 12H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M3 6H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 12H21" stroke={isScrolled ? "white" : "black"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 6H21" stroke={isScrolled ? "white" : "black"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 18H21" stroke={isScrolled ? "white" : "black"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               )}
             </button>
